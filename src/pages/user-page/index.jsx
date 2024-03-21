@@ -34,10 +34,10 @@ const Home = () => {
     };
 
     const renderNotes = (status) => {
-        const filteredNotes = status ? notes.filter(item => item.status === status) : notes;
+        const filteredNotes = status ? notes?.filter(item => item?.status === status) : notes;
         return (
             <div className="card__container">
-                {filteredNotes.length === 0 ? (
+                {filteredNotes?.length === 0 ? (
                     <div className="no-notes-message">Không có ghi chú nào.</div>
                 ) : (
                     filteredNotes.map((item) => (
@@ -50,7 +50,7 @@ const Home = () => {
 
     const handleClick = (item) => {
         const slug = convertToSlug(item.title);
-        navigate(`/${slug}?id=${item._id}`);
+        navigate(`/${slug}?id=${item?._id}`);
     };
 
     const tabs = [

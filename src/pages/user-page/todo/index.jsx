@@ -24,7 +24,7 @@ const Todo = () => {
                     <Collapsible
                         key={index}
                         title={item.title}
-                        totalVocabulary={item.wordList.length}
+                        totalVocabulary={item.wordList?.length}
                     >
                         <VocabularyTest wordPairs={item.wordList} />
                     </Collapsible>
